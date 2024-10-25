@@ -1,0 +1,53 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "ES2021",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "incremental": true,
+    "skipLibCheck": true,
+    "strictNullChecks": false,
+    "noImplicitAny": false,
+    "strictBindCallApply": false,
+    "forceConsistentCasingInFileNames": false,
+    "noFallthroughCasesInSwitch": false,
+    "paths": {
+      "@libs/database": [
+        "libs/database/src"
+      ],
+      "@libs/database/*": [
+        "libs/database/src/*"
+      ],
+      "@libs/email": [
+        "libs/email/src"
+      ],
+      "@libs/email/*": [
+        "libs/email/src/*"
+      ],
+      "@libs/file-storage": [
+        "libs/file-storage/src"
+      ],
+      "@libs/file-storage/*": [
+        "libs/file-storage/src/*"
+      ],
+      "@libs/cache": [
+        "libs/cache/src"
+      ],
+      "@libs/cache/*": [
+        "libs/cache/src/*"
+      ],
+      "@libs/core": [
+        "libs/core/src"
+      ],
+      "@libs/core/*": [
+        "libs/core/src/*"
+      ]
+    }
+  }
+}
