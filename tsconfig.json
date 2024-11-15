@@ -17,6 +17,7 @@
     "strictBindCallApply": false,
     "forceConsistentCasingInFileNames": false,
     "noFallthroughCasesInSwitch": false,
+    "resolveJsonModule": true,
     "paths": {
       "@libs/database": [
         "libs/database/src"
@@ -47,6 +48,12 @@
       ],
       "@libs/core/*": [
         "libs/core/src/*"
+      ],
+      "@libs/translation": [
+        "libs/translation/src"
+      ],
+      "@libs/translation/*": [
+        "libs/translation/src/*"
       ]
     }
   }

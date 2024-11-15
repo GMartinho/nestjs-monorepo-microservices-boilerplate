@@ -1,3 +1,4 @@
+import { TypeOrmDatabaseTypes } from '@libs/database/database.types';
 import { Injectable } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 
@@ -85,8 +86,11 @@ export class Environment {
   }
 
   get authConfig() {
+
+    const teste = this.getString('CONFIRM_EMAIL_SECRET')
+
     return {
-      confirmEmailSecret: this.getString('CONFIRM_EMAIL_SECRET'),
+      confirmEmailSecret: teste,
       confirmEmailExpiresIn: this.getNumber('CONFIRM_EMAIL_EXPIRES_IN'),
       forgotPasswordSecret: this.getString('FORGOT_PASSWORD_SECRET'),
       forgotPasswordExpiresIn: this.getNumber('FORGOT_PASSWORD_EXPIRES_IN'),
@@ -130,5 +134,17 @@ export class Environment {
       defaultName: this.getString('EMAIL_CONFIG_DEFAULT_NAME'),
       defaultEmail: this.getString('EMAIL_CONFIG_DEFAULT_EMAIL'),
     };
+  }
+
+  get databaseConfig() {
+    return {
+      port: this.getNumber('DATABASE_PORT'),
+      username: this.getString('DATABASE_USERNAME'),
+      password: this.getString('DATABASE_PASSWORD'),
+      name: this.getString('DATABASE_NAME'),
+      host: this.getString('DATABASE_HOST'),
+      type: this.getString('DATABASE_TYPE') as TypeOrmDatabaseTypes,
+      synchronize: this.getBoolean('DATABASE_SYNCHRONIZE')
+    }
   }
 }

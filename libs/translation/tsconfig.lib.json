@@ -1,8 +1,8 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "declaration": false,
-    "outDir": "../../dist/apps/nestjs-boilerplate",
+    "declaration": true,
+    "outDir": "../../dist/libs/translation",
     "resolveJsonModule": true
   },
   "include": ["src/**/*"],
